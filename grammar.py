@@ -42,12 +42,13 @@ def send_tweet():
     for character in text:
         if character in string.ascii_letters or character in string.whitespace:
             tweet = tweet + character
+    api = twitter.Api(consumerKey, consumerSecret, accessToken, accessTokenSecret)
     status = api.PostUpdate(tweet)
     print(status.text)
+    del api
     time.sleep(1800)
     send_tweet()
 
 
 toy_pcfg = PCFG.fromstring(pcfg)
-api = twitter.Api(consumerKey, consumerSecret, accessToken, accessTokenSecret)
 send_tweet()
