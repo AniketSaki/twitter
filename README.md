@@ -8,3 +8,5 @@ dependencies:
 python-twitter 3.3
 nltk 3.2.2
 python 3.6
+
+have a config file that contains your twitter app credentials and a PCFG grammar
