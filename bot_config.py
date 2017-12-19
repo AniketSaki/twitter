@@ -1,7 +1,7 @@
-consumerKey = 'wwnCMTRhaMlen5PdXzUElmDug'
-consumerSecret = 'kYR7Sppx6GrtkMs2yWe6RjRPgXFwpy0ppE5dH2HwZXXq39GiPG'
-accessToken = '929721883464835073-YBzh25HobcqNA7a1NmiZOujSDDmF8r9'
-accessTokenSecret = '9fgOgo162ItrDmQCP40R4733MDyWnzDMKH2nqz1Y862Jb'
+consumerKey = ''
+consumerSecret = ''
+accessToken = ''
+accessTokenSecret = ''
 grammar = """
       S -> NP VP
       NP -> Det N
