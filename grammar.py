@@ -43,10 +43,15 @@ def send_tweet():
         if character in string.ascii_letters or character in string.whitespace:
             tweet = tweet + character
     if len(tweet) <= 140:
-        api = twitter.Api(consumerKey, consumerSecret, accessToken, accessTokenSecret)
-        status = api.PostUpdate(tweet)
-        print(status.text)
-        del api
+        try:
+            api = twitter.Api(consumerKey, consumerSecret, accessToken, accessTokenSecret)
+            status = api.PostUpdate(tweet)
+            print(status.text)
+            del api
+        except SysCallError as sce:
+            print('Error in handling', sce)
+        except SSLError as ssl:
+            print('Error in handling', ssl)
         time.sleep(1800)
     send_tweet()
 
