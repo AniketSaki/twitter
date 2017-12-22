@@ -52,8 +52,6 @@ def send_tweet():
             print('Error in handling', sce)
         except SSLError as ssl:
             print('Error in handling', ssl)
-        time.sleep(1800)
-    send_tweet()
 
 
 toy_pcfg = PCFG.fromstring(pcfg)
